@@ -1,3 +1,3 @@
-module AirtableClient
+module Airtable
   VERSION = "0.1.0"
 end

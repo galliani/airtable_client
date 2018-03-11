@@ -1,6 +1,6 @@
-RSpec.describe AirtableClient do
+RSpec.describe Airtable do
   it "has a version number" do
-    expect(AirtableClient::VERSION).not_to be nil
+    expect(Airtable::VERSION).not_to be nil
   end
 
   it "does something useful" do

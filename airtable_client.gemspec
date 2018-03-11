@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "airtable_client/version"
+require "airtable/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "airtable_client"
-  spec.version       = AirtableClient::VERSION
+  spec.name          = "airtable"
+  spec.version       = Airtable::VERSION
   spec.authors       = ["Galih Muhammad"]
   spec.email         = ['galih0muhammad@gmail.com']
 
