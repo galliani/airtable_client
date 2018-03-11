@@ -22,7 +22,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+#### Fetching records
+
+Initial setup for the gem, put it in initializer or just before you call the client:
+```ruby
+Airtable.configure do |config|
+  config.api_key = "YOUR_API_KEY"
+end
+
+```
+
+
+To retrieve records from a table inside a base, you can do this:
+```ruby
+
+client = Airtable.client(base_uid: 'airtablebaseuid', table_name: 'Expense Log')
+client.retrieve_records
+
+```
+
+
 
 ## Development
 
