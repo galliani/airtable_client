@@ -7,7 +7,6 @@ module Airtable
 
     def list_records(table_name:, params: {})
       @connection = Faraday.new(url:  versioned_base_endpoint_url) do |faraday|
-        # faraday.use FaradayMiddleware::RaiseHttpException
         faraday.response  :logger                  # log requests to STDOUT
         faraday.request   :url_encoded
         faraday.adapter   Faraday.default_adapter  # make requests with Net::HTTP
@@ -17,7 +16,11 @@ module Airtable
 
       response = @connection.get do |req|
         req.url URI.escape(table_name)
-        req.params['maxRecords'] = 100
+
+        default_params = params.merge(max_records: 100) unless params[:max_records]
+        default_params.keys.each do |key|
+          processing_query_params(req, default_params, key)
+        end
       end
 
       response.body

@@ -4,7 +4,6 @@ RSpec.describe Airtable::Client do
   before do
     Airtable.configure do |config|
       config.api_key = 'STUBBED_API_KEY'
-      config.api_version = 'v0'
     end    
   end
 

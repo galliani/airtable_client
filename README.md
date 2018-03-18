@@ -36,12 +36,18 @@ end
 To retrieve records from a table inside a base, you can do this:
 ```ruby
 
-client = Airtable.client(base_uid: 'airtablebaseuid', table_name: 'Expense Log')
-client.retrieve_records
+client = Airtable.client(base_uid: 'airtablebaseuid')
+client.list_records(table_name: 'tablename', params: {})
 
 ```
+fill the params hash with a query to filter out the records. By default, this gem will retrieve 100 records at once, so you may want to add max_records key to the params like this: 
 
+```ruby
 
+client.list_records(table_name: 'tablename', params: { max_records: 3 })
+
+```
+At the moment, the only default values for any query param key is for ```max_records```.
 
 ## Development
 

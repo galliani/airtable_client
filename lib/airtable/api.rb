@@ -24,5 +24,29 @@ module Airtable
     def versioned_base_endpoint_url
       config[:endpoint] + config[:api_version] + '/' + config[:base_uid] + '/'
     end
+
+    def processing_query_params(request_obj, params, params_key)
+      keys = [
+        :fields,
+        :filter_by_formula
+        :max_records,
+        :page_size,
+        :sort,
+        :view,
+        :cell_format,
+        :time_zone,
+        :user_locale
+      ]
+
+      return nil unless keys.include?(params_key) || 
+                        params[params_key].nil? || 
+                        params[params_key] == ''
+
+      key_string = params_key.to_s.split('_').each_with_index.map do |a, i| 
+        if i == 0 then a else a.capitalize end 
+      end.join
+
+      request_obj.params[key_string] = params[params_key]
+    end
   end
 end
