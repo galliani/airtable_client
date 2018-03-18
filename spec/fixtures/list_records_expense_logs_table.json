@@ -1,0 +1,46 @@
+{
+    "records": [
+        {
+            "id": "recdUbchNdYg4uoCe",
+            "fields": {
+                "Source": "Sun life insurance ",
+                "Total": 167.36,
+                "Date": "2016-12-19",
+                "Category": "Home Expenses",
+                "Who Paid?": [
+                    "rec7kq0wHGf3DWSG1"
+                ]
+            },
+            "createdTime": "2016-12-23T00:25:54.000Z"
+        },
+        {
+            "id": "recAMXzVTeyVg0YRU",
+            "fields": {
+                "Source": "Datsun ",
+                "Total": 67.68,
+                "Notes": "NOOOOOOOBODY liked the new place I took her to",
+                "Date": "2016-12-19",
+                "Category": "Dining Out",
+                "Who Paid?": [
+                    "recnMhBQ1HscaigyJ"
+                ]
+            },
+            "createdTime": "2016-12-23T00:26:47.000Z"
+        },
+        {
+            "id": "recGXCS8p4BeDAGyU",
+            "fields": {
+                "Source": "Light of India restaurant",
+                "Total": 45.18,
+                "Notes": "Had Pasanda for the first time ",
+                "Date": "2016-12-20",
+                "Category": "Dining Out",
+                "Who Paid?": [
+                    "recnMhBQ1HscaigyJ"
+                ]
+            },
+            "createdTime": "2016-12-23T00:21:58.000Z"
+        }
+    ],
+    "offset": "recGXCS8p4BeDAGyU"
+}

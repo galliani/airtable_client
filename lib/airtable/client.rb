@@ -20,7 +20,7 @@ module Airtable
         req.params['maxRecords'] = 100
       end
 
-      records = JSON.parse(response.body)
+      response.body
     end
 
   end
