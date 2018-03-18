@@ -3,6 +3,7 @@ require "airtable"
 require 'webmock/rspec'
 require 'capybara/rspec'
 require 'json'
+require 'byebug'
 
 WebMock.disable_net_connect!
 

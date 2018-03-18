@@ -39,5 +39,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'capybara', '2.5.0'
   spec.add_development_dependency 'shoulda-context', '1.2.2'
   spec.add_development_dependency 'shoulda-matchers', '3.1.1'  
-  spec.add_development_dependency 'webmock', '2.1.0'  
+  spec.add_development_dependency 'webmock', '2.1.0'
+  spec.add_development_dependency 'byebug'
 end
