@@ -1,0 +1,17 @@
+{
+    "id": "randomrowuid",
+    "fields": {
+        "Name": "Internet",
+        "Due Date": 1,
+        "Payment Method": [
+            "reckmTmhij917cmV9"
+        ],
+        "Last Paid": [
+            "rec3QkauwLw8cvFLf",
+            "rec8pYvU06KOCNL5e",
+            "reciqeOjyTXm1rS9Q"
+        ],
+        "Amount": 79.04
+    },
+    "createdTime": "2017-01-02T20:15:46.000Z"
+}

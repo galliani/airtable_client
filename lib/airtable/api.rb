@@ -28,7 +28,7 @@ module Airtable
     def processing_query_params(request_obj, params, params_key)
       keys = [
         :fields,
-        :filter_by_formula
+        :filter_by_formula,
         :max_records,
         :page_size,
         :sort,
