@@ -39,5 +39,19 @@ module Airtable
 
       response.body
     end
+
+    def delete_record(table_name:, record_uid:)
+      @connection = Faraday.new(url:  versioned_base_endpoint_url) do |faraday|
+        faraday.response  :logger                  # log requests to STDOUT
+        faraday.request   :url_encoded
+        faraday.adapter   Faraday.default_adapter  # make requests with Net::HTTP
+      end
+
+      @connection.authorization(:Bearer, Airtable.api_key)
+
+      response = @connection.delete(URI.escape(table_name) + '/' + record_uid)
+
+      response.body
+    end    
   end
 end
